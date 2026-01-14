@@ -11,7 +11,7 @@ pipeline
 				bat 'whoami'
 				bat 'echo %WORKSPACE%'
 				//Obtener código del repo
-				git 'https://github.com/Cjimenez-unir/CP1-2.git'
+				git branch: 'feature_fix_coverage', git 'https://github.com/Cjimenez-unir/CP1-2.git'
 				stash name:'code', includes:'**'
 			}
         }
@@ -137,4 +137,5 @@ pipeline
         }
     }
 }
+
 
